@@ -1,0 +1,238 @@
+body {
+  font: 300 16px/1.4 sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 850px;
+  margin: 20px auto;
+}
+
+h1,
+h2,
+sup,
+footer {
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  text-align: center;
+}
+
+h1,
+h2 {
+  letter-spacing: .2em;
+  padding: 18px;
+}
+
+h1 {
+  font-weight: 300;
+  max-width: 7em;
+  border-bottom: 1px dashed black;
+  margin: 0 auto 20px;
+}
+
+h2 {
+  font: 300 16px sans-serif;
+  margin: 50px auto 0;
+}
+
+p, sup {
+  letter-spacing: .05em;
+}
+
+sup,
+footer p {
+  font-size: 70%;
+}
+
+a, a:hover {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+code {
+  font: 14px 'Andale Mono', 'Monaco', monospace;
+}
+
+footer {
+  margin: 70px auto;
+}
+
+/* Flexbox properties start here */
+
+.flex-ct {
+  background: #777;
+  margin: 10px 0 40px;
+  padding: 6px;
+  display: flex;
+}
+
+.flex-ct div {
+  background: #eee;
+  padding: 1%;
+  margin: .5%;
+  text-align: center;
+  min-width: 100px;
+}
+
+/* Container additional classes */
+
+.row {
+  flex-direction: row;
+}
+
+.row-rev {
+  flex-direction: row-reverse;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.col-rev {
+  flex-direction: column-reverse;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.j-start {
+  justify-content: flex-start;
+}
+
+.j-end {
+  justify-content: flex-end;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.j-s-between {
+  justify-content: space-between;
+}
+
+.j-s-around {
+  justify-content: space-around;
+}
+
+.a-start {
+  align-items: flex-start;
+}
+
+.a-end {
+  align-items: flex-end;
+}
+
+.a-center {
+  align-items: center;
+}
+
+.a-base {
+  align-items: baseline;
+}
+
+.ct {
+  min-height: 180px;
+}
+
+.ct-start {
+  align-content: flex-start;
+}
+
+.ct-end {
+  align-content: flex-end;
+}
+
+.ct-center {
+  align-content: center;
+}
+
+.ct-s-between {
+  align-content: space-between;;
+}
+
+.ct-s-around {
+  align-content: space-around;;
+}
+
+
+/* Shorthands */
+
+.row-wrap {
+  flex-flow: row wrap;
+}
+
+.row-rev-nowrap {
+  flex-flow: row-reverse nowrap;
+}
+
+
+/* Flex-item main classes */
+
+.o {
+  order: 1;
+}
+
+.o-neg {
+  order: -1;
+}
+
+.g {
+  flex-grow: 1;
+}
+
+.gg {
+  flex-grow: 2;
+}
+
+.s {
+  flex-shrink: 1;
+}
+
+.a-st {
+  align-self: flex-start;
+}
+
+.a-end {
+  align-self: flex-end;
+}
+
+.a-ctr {
+  align-self: center;
+}
+
+/* Flex-item shorthand */
+.fs {
+  flex: 3 1 auto;
+}
+
+/* Flex-item additional classes */
+.row-wrap div {
+  width: 80%;
+}
+
+.no-wrap div,
+.wrap div,
+.sh.row-wrap div {
+  width: 47%;
+}
+
+.flex-ct .demo {
+  background: #d1ee5b;
+}
+
+/* Etc. */
+::selection {
+  background: #ccc;
+}
+::-moz-selection {
+  background: #ccc;
+}

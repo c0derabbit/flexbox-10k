@@ -1,0 +1,220 @@
+<!DOCTYPE html><html lang="en"><title>Flexbox</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="img/eiconbw.png">
+<div class="container">
+  <header>
+    <h1>Flexbox</h1>
+    <p>Some flexbox examples for myself and anyone interested.
+    <p>
+      <a href="#flex">Flex-direction, Flex-wrap, Flex-flow</a><br>
+      <a href="#justify">Justify-content</a><br>
+      <a href="#align">Align-items, Align-content</a><br>
+      <a href="#items">Flex-item properties</a>
+    </p>
+    <p>Recommended read: <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">A Complete Guide to Flexbox</a> (CSS-Tricks)</p>
+  </header>
+
+  <main>
+    <section id="flex"><h2>Flex-direction, Flex-wrap, Flex-flow</h2>
+      <code><b>/* Container */<br>
+          display: flex;</b><br>
+          flex-direction: row;</code>
+      <div class="row flex-ct">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+
+      <code>flex-direction: row-reverse;</code>
+      <div class="row-rev flex-ct">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+
+      <code>flex-direction: column;</code>
+      <div class="col flex-ct">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+
+      <code>flex-direction: column-reverse;</code>
+      <div class="col-rev flex-ct">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+
+      <code><b>/* Flex-item */<br>
+      width: 45.5%;</b><br>
+      flex-direction: row;<br>
+      flex-wrap: nowrap;</code>
+      <div class="no-wrap row flex-ct">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+
+      <code>flex-wrap: wrap;</code>
+      <div class="wrap row flex-ct">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+
+      <code><b>Shorthand</b><br>
+        flex-flow: row wrap;</code>
+      <div class="sh row-wrap flex-ct">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+
+      <code>flex-flow: row-reverse nowrap;</code>
+      <div class="shorthand row-rev-nowrap flex-ct">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+    </section>
+
+    <section id="justify"><h2>Justify-content <sup><a href="#">top</a></sup></h2>
+      <code><b>/* Container */</b><br>
+        justify-content: flex-start;</code>
+      <div class="j-start row flex-ct">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+
+      <code>justify-content: flex-end;</code>
+      <div class="j-end row flex-ct">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+
+      <code>flex-direction: row-reverse;<br>
+        justify-content: flex-end;</code>
+      <div class="j-end row-rev flex-ct">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+
+      <code>justify-content: center;</code>
+      <div class="j-center row flex-ct">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+
+      <code>justify-content: space-around;</code>
+      <div class="j-s-around row flex-ct">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+
+      <code>justify-content: space-between;</code>
+      <div class="j-s-between row flex-ct">
+        <div>1</div><div>2</div><div>3</div>
+      </div>
+    </section>
+
+    <section id="align"><h2>Align-items, Align-content <sup><a href="#">top</a></sup></h2>
+      <code><b>/* Container */</b><br>
+        align-items: stretch; /* Default */</code>
+      <div class="row flex-ct">
+        <div>1<br>:)</div>
+        <div>2<br>.<br>.<br>.</div>
+        <div>3</div>
+      </div>
+
+      <code>align-items: flex-start;</code>
+      <div class="a-start row flex-ct">
+        <div>1<br>:)</div>
+        <div>2<br>.<br>.<br>.</div>
+        <div>3</div>
+      </div>
+
+      <code>align-items: flex-end;</code>
+      <div class="a-end row flex-ct">
+        <div>1<br>:)</div>
+        <div>2<br>.<br>.<br>.</div>
+        <div>3</div>
+      </div>
+
+      <code>align-items: center;</code>
+      <div class="a-center row flex-ct">
+        <div>1<br>:)</div>
+        <div>2<br>.<br>.<br>.</div>
+        <div>3</div>
+      </div>
+
+      <code>align-items: baseline;</code>
+      <div class="a-base row flex-ct">
+        <div>1<br>:)</div>
+        <div>2<br>.<br>.<br>.</div>
+        <div><h3>h3</h3></div>
+      </div>
+
+      <code><b>/* For multiple lines of items */<br>
+        min-height: 180px;</b><br>
+        align-content: stretch; /* Default */</code>
+      <div class="ct row-wrap flex-ct">
+        <div>1<br>:)</div><div>2</div>
+      </div>
+
+      <code>align-content: flex-start;</code>
+      <div class="ct ct-start row-wrap flex-ct">
+        <div>1<br>:)</div><div>2</div>
+      </div>
+
+      <code>align-content: flex-end;</code>
+      <div class="ct ct-end row-wrap flex-ct">
+        <div>1<br>:)</div><div>2</div>
+      </div>
+
+      <code>align-content: center;</code>
+      <div class="ct ct-center row-wrap flex-ct">
+        <div>1<br>:)</div><div>2</div>
+      </div>
+
+      <code>align-content: space-between;</code>
+      <div class="ct ct-s-between row-wrap flex-ct">
+        <div>1<br>:)</div><div>2</div>
+      </div>
+
+      <code>align-content: space-around;</code>
+      <div class="ct ct-s-around row-wrap flex-ct">
+        <div>1<br>:)</div><div>2</div>
+      </div>
+    </section>
+
+    <section id="items">
+      <h2>Flex-item properties <sup><a href="#">top</a></sup></h2>
+      <code>order: 0; /* Default */</code>
+      <div class="flex-ct">
+        <div class="demo">1</div><div>2<br></div><div>3</div>
+      </div>
+
+      <code>order: 1;</code>
+      <div class="flex-ct">
+        <div class="demo o">1</div><div>2</div><div>3</div>
+      </div>
+
+      <code>order: -1;</code>
+      <div class="flex-ct">
+        <div>1</div><div class="demo o-neg">2</div><div>3</div>
+      </div>
+
+      <code>flex-grow: 2;</code>
+      <div class="flex-ct">
+        <div class="g"><code>flex-grow: 1;</code></div>
+        <div class="gg demo"><code>flex-grow: 2;</code></div>
+        <div class="g"><code>flex-grow: 1;</code></div>
+      </div>
+
+      <code>flex-shrink: 1;</code>
+      <div class="flex-ct">
+        <div class="s demo"><code>flex-shrink: 1;</code></div><div class="g">2</div><div class="g">3</div>
+      </div>
+
+      <code>/* Shorthand: grow, shrink, basis */</code>
+      <div class="flex-ct">
+        <div class="fs demo"><code>flex: 3 1 auto;</code></div><div>2</div><div>3</div>
+      </div>
+
+      <code>align-self: flex-start | flex-end | center | baseline | stretch</code>
+      <div class="ct flex-ct">
+        <div class="a-st demo"><code>align-self: flex-start;</code></div>
+        <div>2</div>
+        <div class="a-end test"><code>align-self: flex-end;</code></div>
+        <div class="a-ctr demo"><code>align-self: flex-center;</code></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>This was put together by <a href="http://c0derabbit.github.io" target="_blank">c0derabbit</a>.</p>
+  </footer>
+</div>
+</html>
